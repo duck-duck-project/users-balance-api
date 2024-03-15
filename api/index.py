@@ -1,11 +1,13 @@
-from flask import Flask
+from fastapi import FastAPI
 
-app = Flask(__name__)
+app = FastAPI()
 
-@app.route('/')
+
+@app.get('/')
 def home():
     return 'Hello, World!'
 
-@app.route('/about')
+
+@app.get('/about')
 def about():
     return 'About'
